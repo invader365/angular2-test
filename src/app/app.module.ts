@@ -5,15 +5,17 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // APP COMPONENTS
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './main.component/main.component';
+import { AppToggleDirective } from './toggle.directive/toggle.directive';
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    AppToggleDirective
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule
