@@ -25,7 +25,7 @@ export class MainComponent implements OnInit {
     // model = this.getJSON();
     // model = new Product(this.value.options, this.value.id, this.value.name);
 
-    constructor(private http: Http, formBuilder: FormBuilder) {
+    constructor(private http: Http) {
     }
 
     ngOnInit() {
@@ -36,8 +36,6 @@ export class MainComponent implements OnInit {
         });
 
         this.showLoader = false;
-        console.log('this.model');
-        console.log(this.model);
     }
 
     onSelect(optionId) {
