@@ -1,0 +1,24 @@
+{
+    "product" : {
+            "options" : ["small", "medium", "large"],
+            "productid" : "0",
+            "productname" : "Product X"
+    },
+    "products" : [
+        {
+            "options" : ["small", "medium", "large"],
+            "productid" : "1",
+            "productname" : "Product A"
+        },
+        {
+            "options" : ["small", "medium", "large"],
+            "productid" : "2",
+            "productname" : "Product B"
+        },
+        {
+            "options" : ["small", "medium", "large"],
+            "productid" : "3",
+            "productname" : "Product C"
+        }
+    ]
+}

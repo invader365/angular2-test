@@ -1,34 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MatAutocompleteModule, MatInputModule } from '@angular/material';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-// APP COMPONENTS
+// MODULES
+import { LayoutModule } from './layout/layout.module';
+
+// COMPONENTS
+import { AppComponent } from './app.component';
 import { MainComponent } from './main.component/main.component';
-import { AppToggleDirective } from './toggle.directive/toggle.directive';
-import { MaterialComponent } from './material.component/material.component';
 import { NotfoundComponent } from './notfound.component/notfound.component';
+
+// DIRECTIVES
+import { AppToggleDirective } from './toggle.directive/toggle.directive';
+
+// ROUTES
+import { RouterModule } from '@angular/router';
+import { MODULE_ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
+    AppComponent,
     MainComponent,
     AppToggleDirective,
-    MaterialComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatAutocompleteModule,
-    MatInputModule,
-    NoopAnimationsModule,
-    HttpModule
+    LayoutModule,
+    HttpModule,
+    RouterModule.forRoot(MODULE_ROUTES),
   ],
-  exports: [MatAutocompleteModule, MatInputModule],
   providers: [],
-  bootstrap: [MainComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
