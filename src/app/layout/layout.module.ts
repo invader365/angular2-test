@@ -5,10 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-// COMPONENTS
+// APP COMPONENTS
 import { LayoutComponent } from './layout.component';
-import { ContentComponent } from './content/content.component';
-import { MaterialComponent } from './material/material.component';
+import { MaterialComponent } from './content/material/material.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports: [
@@ -21,9 +21,9 @@ import { MaterialComponent } from './material/material.component';
     RouterModule,
   ],
   declarations: [
-    ContentComponent,
     LayoutComponent,
     MaterialComponent,
+    MenuComponent,
   ],
   exports: [MatAutocompleteModule, MatInputModule],
 })

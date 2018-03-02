@@ -1,0 +1,14 @@
+<p>
+  menu works!
+</p>
+
+<div class="nav-container">
+    <ul class="nav">
+        <li routerlinkactive="active" class="opcion">
+            <!--[ngClass]="{'active visible': this.router.url=='/layout/(second:material)'}"-->
+            <a id="home" [routerLink]="['/layout', {outlets: {'second': ['material']}}]">
+                <span>Inicio</span>
+            </a>
+        </li>
+    </ul>
+</div>

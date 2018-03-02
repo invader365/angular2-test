@@ -19,7 +19,7 @@ export class MainComponent implements OnInit {
     myform: FormGroup;
     showLoader = true;
 
-    title = 'angularApp';
+    title = 'MainComponent';
     model = new Product(['small', 'medium', 'large'], 1, 'ProductA');
     selectedOption = 'small';
     // model = this.getJSON();

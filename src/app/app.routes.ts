@@ -1,19 +1,21 @@
-import { Route } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-// App Components
+// APP COMPONENTS
 import { NotfoundComponent } from './notfound.component/notfound.component';
-import { MainComponent } from './main.component/main.component';
-import { ContentComponent } from './layout/content/content.component';
 import { LayoutComponent } from './layout/layout.component';
+import { MainComponent } from './main.component/main.component';
+import { MaterialComponent } from './layout/content/material/material.component';
 
-export const MODULE_ROUTES: Route[] = [
-  { path: 'home', component: MainComponent },
+export const ROUTER_LINKS: Routes = [
+  // { path: 'login', component: MainComponent },
   { path: 'layout', component: LayoutComponent,
     children: [
-      { path: 'content', component: ContentComponent, outlet: 'second' },
-      // { path: 'content/:idProveedor', component: FormSedesComponent, outlet: 'second' , canActivate: [AuthGuard]},
+      { path: 'material', component: MaterialComponent, outlet: 'second' },  // , canActivate: [AuthGuard]
     ]
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'layout', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent }
 ];
+
+export const ROUTES: ModuleWithProviders = RouterModule.forRoot(ROUTER_LINKS);

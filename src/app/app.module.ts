@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
-// MODULES
+// APP MODULES
 import { LayoutModule } from './layout/layout.module';
 
-// COMPONENTS
+// APP COMPONENTS
 import { AppComponent } from './app.component';
 import { MainComponent } from './main.component/main.component';
 import { NotfoundComponent } from './notfound.component/notfound.component';
 
-// DIRECTIVES
+// APP DIRECTIVES
 import { AppToggleDirective } from './toggle.directive/toggle.directive';
 
-// ROUTES
-import { RouterModule } from '@angular/router';
-import { MODULE_ROUTES } from './app.routes';
+// APP ROUTER
+import { ROUTER_LINKS } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { MODULE_ROUTES } from './app.routes';
     BrowserModule,
     LayoutModule,
     HttpModule,
-    RouterModule.forRoot(MODULE_ROUTES),
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(ROUTER_LINKS),
   ],
   providers: [],
   bootstrap: [AppComponent]
