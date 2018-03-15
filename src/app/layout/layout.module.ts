@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+// APP MODULES
+import { JsonServerModule } from './content/json-server/json-server.module';
+
 // APP COMPONENTS
 import { LayoutComponent } from './layout.component';
 import { MaterialComponent } from './content/material/material.component';
@@ -14,6 +17,7 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     FormsModule,
+    JsonServerModule,
     MatAutocompleteModule,
     MatInputModule,
     NoopAnimationsModule,

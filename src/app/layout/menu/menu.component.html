@@ -6,8 +6,13 @@
     <ul class="nav">
         <li routerlinkactive="active" class="opcion">
             <!--[ngClass]="{'active visible': this.router.url=='/layout/(second:material)'}"-->
-            <a id="home" [routerLink]="['/layout', {outlets: {'second': ['material']}}]">
-                <span>Inicio</span>
+            <a id="material" [routerLink]="['/layout', {outlets: {'second': ['material']}}]">
+                <span>Material</span>
+            </a>
+        </li>
+        <li routerlinkactive="active" class="opcion">
+            <a id="json-server" [routerLink]="['/layout', {outlets: {'second': ['json-server']}}]">
+                <span>Json-Server</span>
             </a>
         </li>
     </ul>

@@ -17,6 +17,7 @@ import { AppToggleDirective } from './toggle.directive/toggle.directive';
 
 // APP ROUTER
 import { ROUTER_LINKS } from './app.routes';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ROUTER_LINKS } from './app.routes';
     MainComponent,
     AppToggleDirective,
     NotfoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
