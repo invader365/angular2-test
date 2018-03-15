@@ -1,4 +1,3 @@
-<h1>json-server works!</h1>
 <h3 *ngIf="articleIdToUpdate; else create">
   Update Article for Id: {{articleIdToUpdate}}
 </h3>
@@ -15,8 +14,7 @@
         <label *ngIf="articleForm.get('category').invalid && processValidation" [ngClass] = "'error'"> Category is required. </label>
       </td></tr>
       <tr><td colspan="2">
-        <button *ngIf="!articleIdToUpdate">CREATE</button>
-        <button *ngIf="articleIdToUpdate">UPDATE</button>
+        <button><span *ngIf="!articleIdToUpdate">Create</span><span *ngIf="articleIdToUpdate">Update</span></button>
         <button (click)="backToCreateArticle()" *ngIf="articleIdToUpdate">Go Back</button>
       </td></tr>
     </table>
@@ -40,7 +38,10 @@
     </div>
   </div>
   <ng-template #processing>
-    <img *ngIf="requestProcessing" src="assets/images/loading.gif">
+    <span *ngIf="requestProcessing">
+      Loading..
+      <img src="assets/images/loading.gif">
+    </span>
   </ng-template>
 </div>
 <h3>Article Details</h3>

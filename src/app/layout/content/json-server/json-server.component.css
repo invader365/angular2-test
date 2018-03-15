@@ -5,19 +5,29 @@ h1 {
 }
 table {
   border-collapse: collapse;
+  margin-bottom: 2em;
+}
+th, td {
+  padding: 2px 5px;
 }
 input {
   border: 0 none;
-  width: 225px;
+  width: 320px;
   margin: 8px 0;
   background-color: #dfdfdf;
-  font-size:14px;
+  font-size: 16px;
   padding: 0.5em 0.25em;
 }
 button {
   background-color: #008CBA;
+  padding: 0.25em 0.85em;
+  font-size: 14px;
   color: white;
   border: 0 none;
+}
+button:hover {
+  background-color: #dfdfdf;
+  color: gray;
 }
 .error{
   color: red;

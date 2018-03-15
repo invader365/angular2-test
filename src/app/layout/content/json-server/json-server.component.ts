@@ -91,26 +91,32 @@ export class JsonServerComponent implements OnInit {
   }
   // Delete article
   deleteArticle(articleId: string) {
-    this.preProcessConfigurations();
-    this.articleService.deleteArticleById(articleId)
-      .subscribe(successCode => {
-          // this.statusCode = successCode;
-          // Expecting success code 204 from server
-          this.statusCode = 204;
-          this.getAllArticles();
-          this.backToCreateArticle();
-        },
-        errorCode => this.statusCode = errorCode);
+    let response = confirm('Are you sure?');
+
+    if (response == true) {
+      this.preProcessConfigurations();
+      this.articleService.deleteArticleById(articleId)
+        .subscribe(successCode => {
+            // this.statusCode = successCode;
+            // Expecting success code 204 from server
+            this.statusCode = 204;
+            this.getAllArticles();
+            this.backToCreateArticle();
+          },
+          errorCode => this.statusCode = errorCode);
+    }
   }
   // Perform preliminary processing configurations
   preProcessConfigurations() {
     this.statusCode = null;
     this.requestProcessing = true;
   }
+
   // Go back from update to create
   backToCreateArticle() {
-    this.articleIdToUpdate = null;
-    this.articleForm.reset();
-    this.processValidation = false;
+      this.articleIdToUpdate = null;
+      this.articleForm.reset();
+      this.processValidation = false;
+      console.log('confirm');
   }
 }
