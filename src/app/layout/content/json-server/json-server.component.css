@@ -1,0 +1,29 @@
+h1 {
+  font-size: 1.4em;
+  margin: 20px 0 0 0;
+  font-weight: 400;
+}
+table {
+  border-collapse: collapse;
+}
+input {
+  border: 0 none;
+  width: 225px;
+  margin: 8px 0;
+  background-color: #dfdfdf;
+  font-size:14px;
+  padding: 0.5em 0.25em;
+}
+button {
+  background-color: #008CBA;
+  color: white;
+  border: 0 none;
+}
+.error{
+  color: red;
+  font-size: 20px;
+}
+.success{
+  color: green;
+  font-size: 20px;
+}

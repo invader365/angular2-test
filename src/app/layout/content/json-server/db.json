@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "title": "Android AsyncTask Exam",
+      "category": "Android",
+      "id": 1
+    },
+    {
+      "title": "Java Development Kit",
+      "category": "Java",
+      "id": 2
+    },
+    {
+      "title": "Go Mobile Development",
+      "category": "GO",
+      "id": 3
+    }
+  ]
+}
